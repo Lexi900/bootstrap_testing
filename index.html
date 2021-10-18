@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bt.css">
+
+    <title>Bootstrap Example:web109-1</title>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid text-center" style="background-color: grey;">
+        <div class="container">
+            <h1 class="display-4">Bootstrap Example testing testing testing testing</h1>
+            <p> Window width: <span id="winwidth"></span></p>
+            <p class="lead">Lead testing lead testing lead testing</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <!-- <div class="col-6 col-md-4" style="background-color: azure;min-height: 50vh;">Div 1</div>
+            <div class="col-6 col-md-4" style="background-color: antiquewhite;">Div 2</div>
+            <div class="col-6 col-md-4" style="background-color: pink">Div 3</div> -->
+            <!-- 熒幕寬度小於576px就是6、6，二分；當大於768px的時候就開始4、4、4三分（總和要等於12，用等於12來調整） 
+            斷點：col-576-sm-768-md-992-lg-1200-xl-->
+            <!-- <div class="col-md-4 col-lg-6" style="background-color: azure;min-height: 50vh;">Div 1</div> -->
+            <div class="col-sm-4" style="background-color: azure;">Div 1</div>
+            <div class="col-sm-4" style="background-color: antiquewhite;">Div 2</div>
+            <div class="col-sm-4" style="background-color: pink">Div 3</div>
+            <!-- 因爲iphone se橫屏（568）小於576，所以如果就是要給iphone用的，就會想到要重新設計斷點，程式碼如下（在media query裏找）
+                [class*="col-"] { // For mobile phones
+    width: 100%;
+}
+@media only screen and (min-width: 600px) { /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+ ...
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) { /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+} -->
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(window).on('resize', function () {
+            var winw = $(window).width();
+            console.log(winw);
+            $("#winwidth").html(winw);
+        });
+    </script>
+
+</body>
+
+</html>

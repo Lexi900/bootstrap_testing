@@ -1,0 +1,11 @@
+.jumbotron{
+    color: white;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg");
+    /* 通常導入的圖片是向左上對齊，所以接下來要開始調整圖片*/
+    /* background-size:cover; */
+    background-repeat: no-repeat;
+    /* 左右拉屏幕的時候，背景圖是要repeat還是跑出背景色 */
+    background-position:50% 8%;
+    height:50vh;
+    /* vh:viewport height */
+} 
